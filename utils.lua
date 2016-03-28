@@ -35,4 +35,75 @@ function utils.append(t1,t2)
     return t1
 end
 
+-- viualizes the current state of the board, including pruned variables if available
+-- depth will be 0 if not defined
+function utils.printCurrentBoardState(currentAssignments, variableMask, currDepth)
+	depth = currDepth or 0 -- default variable hack
+	vm = variableMask
+	curr = currentAssignments
+
+	io.write("\n")
+	n = #variableMask
+	for i = 1, n, 1 do
+		for j = 1, n, 1 do
+			if curr[i] == j then
+				io.write("Q")
+			else
+				if vm[i][j] == depth then
+					io.write("X")
+				elseif vm[i][j] ~= 0 then
+					io.write("0")
+				else
+					io.write(".")
+				end
+			end
+			io.write(" ")
+		end
+		io.write("\n")
+	end
+	io.write("\n")	
+end
+
+
+
+function utils.test(t) 
+		io.write("A("..t..")")
+		io.read(1)
+		io.write("B\n")
+end
+
+function utils.print_r ( t )  
+    local print_r_cache={}
+    local function sub_print_r(t,indent)
+        if (print_r_cache[tostring(t)]) then
+            print(indent.."*"..tostring(t))
+        else
+            print_r_cache[tostring(t)]=true
+            if (type(t)=="table") then
+                for pos,val in pairs(t) do
+                    if (type(val)=="table") then
+                        print(indent.."["..pos.."] => "..tostring(t).." {")
+                        sub_print_r(val,indent..string.rep(" ",string.len(pos)+8))
+                        print(indent..string.rep(" ",string.len(pos)+6).."}")
+                    elseif (type(val)=="string") then
+                        print(indent.."["..pos..'] => "'..val..'"')
+                    else
+                        print(indent.."["..pos.."] => "..tostring(val))
+                    end
+                end
+            else
+                print(indent..tostring(t))
+            end
+        end
+    end
+    if (type(t)=="table") then
+        print(tostring(t).." {")
+        sub_print_r(t,"  ")
+        print("}")
+    else
+        sub_print_r(t,"  ")
+    end
+    print()
+end
+
 return utils

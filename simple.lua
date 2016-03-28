@@ -12,16 +12,9 @@ the n-queens problem. The solver is implemented in the constraintPropagation
 module. 
 
 CSP:
-Place n queens on a nxn board so that no queen attacks another queen. 
+Simple problem to show logs.
 
-The model consists of an array of size n for the n queens positions. The 
-index corresponds to the row while the value at that index corresponds to 
-the column of the respective queen.
 --]]
-
-----------------------------[[ CONFIGURATION ]]----------------------------
--- number of queens
-n = 4
 
 ------------------[[ PART ONE - MODELLING THE PROBLEM ]]-------------------
 -- imports
@@ -29,47 +22,17 @@ utils = require("utils")
 cm = require("constraintModelling")
 cp = require("constraintPropagation")
 
--- queens domain 1 to n
-QUEENS = cm.range(1,n)
-
 -- the variables table (corresponds to "find" in Essence)
-my_variables = {}
-
--- fill with 6 fields
-for i = 1, n, 1 do
-	my_variables[i] = QUEENS
-end
+my_variables = {
+	{2, 11, 16}, 	-- x1
+	{2, 5, 10, 11} 	-- x2
+}
 
 -- the constraints table (corresponds to "such that" in Essence)
-my_constraints = {}
-
--- the allDifferent constraint (equivalent is commented out)
---[[my_constraints = {
-	{1,2, cm.notEquals() },
-	{1,3, cm.notEquals() },
-	{1,4, cm.notEquals() },
-	{2,3, cm.notEquals() },
-	{2,4, cm.notEquals() },
-	{3,4, cm.notEquals() }
-}]]
-utils.append(my_constraints, cm.allDifferent(QUEENS))
-
--- add diagonal constraints
-for i in pairs(QUEENS) do 
-	for j in pairs(QUEENS) do
-		if i > j then
-			table = {
-				-- I'm cheating here a little bit. Curr is the table in the constraintPropagation module. It holds the current assignments while solving.
-				{i, j, function (_,_) return (curr[i] + i ~= curr[j] + j) end },		
-				{i, j, function (_,_) return (curr[i] - i ~= curr[j] - j) end }
-			}
-			utils.append(my_constraints,table)
-		end
-	end
-end
-
-
-
+my_constraints = {
+	--c(x1 < x2)
+	{1,2, cm.lessThan() }
+}
 
 ------------------[[ PART TWO - KICKSTART THE SOLVER ]]-------------------
 -- print variables and their domains in console
@@ -79,6 +42,7 @@ io.write("\n")
 
 -- print the number of constraints
 io.write("Number of constraints: \n" .. #my_constraints .. "\n")
+utils.print_r(my_constraints)
 io.write("\n")
 
 -- release the kraken! (or start the solver ...)
