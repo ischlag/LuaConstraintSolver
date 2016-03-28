@@ -72,6 +72,18 @@ function utils.test(t)
 		io.write("B\n")
 end
 
+
+function utils.containsArc(tbl, el)
+   for i=1, #tbl do
+      if (tbl[i][1] == el[1]) and (tbl[i][2] == el[2]) and (tbl[i][3] == el[3]) then 
+         return true
+      end
+   end
+   return false
+end
+
+
+-- source of this function: https://coronalabs.com/blog/2014/09/02/tutorial-printing-table-contents/
 function utils.print_r ( t )  
     local print_r_cache={}
     local function sub_print_r(t,indent)
