@@ -52,13 +52,5 @@ utils.print_r(my_constraints)
 io.write("\n")
 
 -- release the kraken! (or start the solver ...)
-if cp.solve(my_variables, my_constraints) then 
-	io.write("Success!\n")
-	io.write("Solution: ") 
-	utils.printArray(cp.getSolution())
-else
-	io.write("No Solution Found! :(\n")
-end
-
--- TODO: search stats?!
-io.write("Number of search nodes: " .. nodes .. "\n")
+cp.solve(my_variables, my_constraints, false, false)
+print("Arch Consistency Done")

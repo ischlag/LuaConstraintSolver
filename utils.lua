@@ -64,7 +64,11 @@ function utils.printCurrentBoardState(currentAssignments, variableMask, currDept
 	io.write("\n")	
 end
 
-
+function utils.log(str)
+	if log then
+		print(str)
+	end
+end
 
 function utils.test(t) 
 		io.write("A("..t..")")
@@ -75,7 +79,7 @@ end
 
 function utils.containsArc(tbl, el)
    for i=1, #tbl do
-      if (tbl[i][1] == el[1]) and (tbl[i][2] == el[2]) and (tbl[i][3] == el[3]) then 
+      if (tbl[i][1] == el[1]) and (tbl[i][2] == el[2]) then 
          return true
       end
    end
