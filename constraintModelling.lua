@@ -13,27 +13,27 @@ local constraintModelling = {}
 
 -- returns a table (or array if you want) with a specifc numeric range.
 function constraintModelling.range(from, to) 
-	table = {}
+	tbl = {}
 	j = 1
 	for i = from, to, 1 do 
-		table[j] = i
+		tbl[j] = i
 		j = j + 1
 	end
-	return table
+	return tbl
 end
 
 -- returns not-equal constraints such that all variable ids are different.
 -- inspired by Essence allDifferent
 function constraintModelling.allDifferent(indecies)
-	table = {}
+	tbl = {}
 	k = 1
-	for i = 1, #indecies, 1 do
+	for i = 1, #indecies-1, 1 do
 		for j = i+1, #indecies, 1 do
-			table[k] = {i, j, constraintModelling.notEquals()}
+			tbl[k] = {i, j, constraintModelling.notEquals()}
 			k = k + 1
 		end
 	end
-	return table
+	return tbl
 end
 
 

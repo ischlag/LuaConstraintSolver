@@ -5,14 +5,11 @@ Practical 2, 12.04.2016
 150021237
 
 Description:
-The first part of this file is the modelling of the n-queens problem. The 
-variables and constraints are modelled using the constraintModelling module.
-The second part of this file runs the solver in order to find a solution for 
-the n-queens problem. The solver is implemented in the constraintPropagation
-module. 
+ArcConsistency Example from the slides in Week 7 Lecture 1 Page 67-90
+This version prints all log outputs
 
 CSP:
-ArcConsistency Example from the slides Wk7 Le1 Page 67-90
+See slides
 
 --]]
 
@@ -52,5 +49,5 @@ utils.print_r(my_constraints)
 io.write("\n")
 
 -- release the kraken! (or start the solver ...)
-cp.solve(my_variables, my_constraints, false, false)
+cp.solve(my_variables, my_constraints, false, true)
 print("Arch Consistency Done")

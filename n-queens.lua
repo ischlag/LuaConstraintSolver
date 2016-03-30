@@ -21,7 +21,7 @@ the column of the respective queen.
 
 ----------------------------[[ CONFIGURATION ]]----------------------------
 -- number of queens
-n = 4
+n = 6
 
 ------------------[[ PART ONE - MODELLING THE PROBLEM ]]-------------------
 -- imports
@@ -35,35 +35,30 @@ QUEENS = cm.range(1,n)
 -- the variables table (corresponds to "find" in Essence)
 my_variables = {}
 
--- fill with 6 fields
+-- fill with n fields
 for i = 1, n, 1 do
 	my_variables[i] = QUEENS
 end
 
 -- the constraints table (corresponds to "such that" in Essence)
 my_constraints = {}
-
--- the allDifferent constraint (equivalent is commented out)
---[[my_constraints = {
-	{1,2, cm.notEquals() },
-	{1,3, cm.notEquals() },
-	{1,4, cm.notEquals() },
-	{2,3, cm.notEquals() },
-	{2,4, cm.notEquals() },
-	{3,4, cm.notEquals() }
-}]]
 utils.append(my_constraints, cm.allDifferent(QUEENS))
 
 -- add diagonal constraints
 for i in pairs(QUEENS) do 
 	for j in pairs(QUEENS) do
 		if i > j then
-			table = {
-				-- I'm cheating here a little bit. Curr is the table in the constraintPropagation module. It holds the current assignments while solving.
-				{i, j, function (_,_) return (curr[i] + i ~= curr[j] + j) end },		
-				{i, j, function (_,_) return (curr[i] - i ~= curr[j] - j) end }
+			tbl = {
+				{i, j, 	function(x,y) 
+							return (x + math.abs(j-i) ~= y)
+						end
+				},
+				{i, j, 	function(x,y) 
+							return (x - math.abs(j-i) ~= y)
+						end
+				}
 			}
-			utils.append(my_constraints,table)
+			utils.append(my_constraints,tbl)
 		end
 	end
 end
@@ -80,9 +75,10 @@ io.write("\n")
 -- print the number of constraints
 io.write("Number of constraints: \n" .. #my_constraints .. "\n")
 io.write("\n")
+utils.print_r(my_constraints)
 
 -- release the kraken! (or start the solver ...)
-if cp.solve(my_variables, my_constraints) then 
+if cp.solve(my_variables, my_constraints, true, false) then 
 	io.write("Success!\n")
 	io.write("Solution: ") 
 	utils.printArray(cp.getSolution())
