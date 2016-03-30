@@ -86,6 +86,23 @@ function utils.containsArc(tbl, el)
    return false
 end
 
+function utils.contains(tbl, el)
+   for i=1, #tbl do
+      if tbl[i] == el then 
+         return true
+      end
+   end
+   return false
+end
+
+function utils.getKey(tbl, value)
+   for i=1, #tbl do
+      if tbl[i] == value then 
+         return i
+      end
+   end
+   return Nil
+end
 
 -- source of this function: https://coronalabs.com/blog/2014/09/02/tutorial-printing-table-contents/
 function utils.print_r ( t )  

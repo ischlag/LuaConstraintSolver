@@ -17,6 +17,8 @@ utils = require("utils")
 nodes = 0
 -- the current variable associations
 curr = {}
+-- used variables
+varList = {}
 -- the variables and their domains
 variables = {}
 -- the constraints
@@ -58,6 +60,7 @@ function constraintPropagation.getSolution()
 	return curr
 end
 
+-- DEPRECATED (pure backtrack implementation is not given)
 -- recursive depth-first search.
 -- backtracks whenever a variable is wiped-out or constraints are violated.
 function constraintPropagation.backtrack(depth)	
@@ -80,6 +83,7 @@ function constraintPropagation.backtrack(depth)
 	end
 end
 
+-- DEPRECATED (was used for pure backtrack version)
 -- return false if the assigned variables violate any of the assigned.
 -- variables so far.
 function constraintPropagation.checkConsistency(depth) 
@@ -104,8 +108,13 @@ function constraintPropagation.forwardChecking(depth)
 		-- assign variables
 		if varMask[depth][d] == 0 then
 			curr[depth] = variables[depth][d]
+			table.insert(varList, d)
+			-- clear old assignments
+			for i = depth + 1, #curr, 1 do
+				if curr[i] ~= 0 then curr[i] = 0 end
+			end
 			-- prune all other possibilities
-			for i = 1, #variables[depth] do
+			for i = 1, #varMask[depth] do
 				if i ~= d and varMask[depth][i] == 0 then
 					varMask[depth][i] = depth
 				end
@@ -121,7 +130,7 @@ function constraintPropagation.forwardChecking(depth)
 			if constraintPropagation.checkArcConsistencyAndPrune(depth) then
 
 				-- print board to console
-				utils.print_r(varMask)
+				--utils.print_r(varMask)
 				utils.printCurrentBoardState(curr, varMask, depth)
 
 				if(depth == varCount) then		
@@ -151,20 +160,16 @@ end
 -- makes use of the AC3 algorithm
 function constraintPropagation.checkArcConsistencyAndPrune(depth)
 	utils.log("### checkArcs:")
-	for i = 1, varCount, 1 do
-		-- force node consistency 
-		-- TODO: once unary functions are allowed, enforce node consistency.
-	end
 
-
-	queue = constraintPropagation.addAllArcsFromConstraints()
+	--queue = constraintPropagation.addAllArcsFromConstraints()
+	queue = constraintPropagation.addAffectedArcs(depth)
 
 	repeat
 		currArc = queue[1]
 		table.remove(queue, 1)
-
+		--print("Queue Size: " .. #queue)
 		-- revise(arc(xi, xj))
-		if constraintPropagation.reviseArc(currArc, depth) then
+		if currArc ~= Nil and constraintPropagation.reviseArc(currArc, queue, depth) then
 			-- true -> arc was pruned, we have to recheck all arcs which are based on the support of this arc's first variable.
 			-- add to queue all arcs(xh,xi) where h ~= j and h ~= i
 			xi = currArc[1]
@@ -201,8 +206,10 @@ function constraintPropagation.checkArcConsistencyAndPrune(depth)
 	return not constraintPropagation.areVariablesWipedOut(depth)
 end
 
+-- Restores pruned variables and assignments. Call when a wipeout has occured. 
 function constraintPropagation.unprune(currVarIndex, depth)
 	-- unprune all varMask[][] == depth -> 0
+	print("wipeout")
 	for i,tbl in pairs(varMask) do
 		for j,v in pairs(tbl) do
 			if v == depth then
@@ -217,27 +224,28 @@ end
 
 -- returns true if it was able to prune values from the domain of the two variables of this arc.
 -- returns false if this was not the case.
-function constraintPropagation.reviseArc(currArc, depth) 
-	utils.log("# ReviseArc:")
+function constraintPropagation.reviseArc(currArc, queue, depth) 
+	utils.log("\n# ReviseArc:")
 	pruned = false	
-
-	utils.log("varMask at start")
-	if log then utils.print_r(varMask) end
 	
 	x1 = currArc[1]
 	x2 = currArc[2]
 
 	utils.log("x".. x1.." vs x" .. x2 )
+	utils.log("varMask at start")
+	
+	if log then utils.print_r(varMask) end
+	
 	-- find all the values in the first variable which are supported by the second variable
 	-- prune all the domain values of the first variable which are not supported by any second variable domain value
 
 	--iterate over all domain values of the first variable
 	for i = 1, #variables[x1], 1 do 
-		if varMask[x1][i] == 0 then-- continue implementation with goto
+		if varMask[x1][i] == 0 then
 			support = false
 			--iterate over all domain values of the second variable
 			for j = 1, #variables[x2], 1 do 
-				if varMask[x2][j] == 0 then -- continue implementation with goto
+				if varMask[x2][j] == 0 then
 					-- constraint function
 					f = currArc[3]
 					-- build conjunction of the results. If one value supports i then the "support" will become true.
@@ -254,9 +262,14 @@ function constraintPropagation.reviseArc(currArc, depth)
 			utils.log(string.format("overall support: %s\n", tostring(support)))
 			if not support then 
 				utils.log("prune: " .. variables[x1][i])
+				
 				-- prune value according to depth
 				utils.log("varMask")
-				varMask[x1][i] = depth			
+				varMask[x1][i] = depth	
+
+				-- add arcs which supported this depth level
+				utils.append(queue, constraintPropagation.addAffectedArcs(depth))
+
 				pruned = true
 				if log then utils.print_r(varMask) end
 			end
@@ -289,24 +302,37 @@ function constraintPropagation.addAllArcsFromConstraints()
 	return arcs
 end
 
-function constraintPropagation.addAllArcsFromConstraints2()
+-- return a table of arcs based on only the relevant arcs
+function constraintPropagation.addAffectedArcs(depth)
 	arcs = {}
 	i = 1
 	
-	for k = 1, #constraints, 1 do
-		arcs[i] = constraintPropagation.getForwardArc(constraints[k])
-		i = i + 1
-		arcs[i] = constraintPropagation.getBackwardArc(constraints[k])
-		i = i + 1
+	for j = 1, #variables, 1 do
+		for k = 1, #variables, 1 do
+			for l = 1, #constraints, 1 do
+				if (constraints[l][1] == j) and (constraints[l][2] == k) then
+					a = constraintPropagation.getForwardArc(constraints[l])
+					if a[2] == depth then
+						arcs[i] = a
+						i = i + 1
+					end
+				elseif (constraints[l][1] == k) and (constraints[l][2] == j) then
+					a = constraintPropagation.getBackwardArc(constraints[l])
+					if a[2] == depth then
+						arcs[i] = a
+						i = i + 1
+					end
+				end				
+			end
+		end
 	end
-
 	return arcs
 end
 
 function constraintPropagation.areVariablesWipedOut(depth) 
 	for d,tbl in pairs(variables) do 
 		-- only check variables which are not assigned yet
-		if d > depth then 
+		--if d > depth then 
 			wipedout = false
 			for _,v in pairs(tbl) do
 				wipedout = wipedout or (v == 0) 
@@ -314,7 +340,7 @@ function constraintPropagation.areVariablesWipedOut(depth)
 			if wipedout then
 				return true
 			end
-		end
+		--end
 	end
 	return false
 end
