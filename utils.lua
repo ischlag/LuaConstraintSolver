@@ -52,7 +52,8 @@ function utils.printCurrentBoardState(currentAssignments, variableMask, currDept
 				if vm[i][j] == depth then
 					io.write("X")
 				elseif vm[i][j] ~= 0 then
-					io.write("0")
+					io.write(tostring(vm[i][j]))
+					--io.write("0")
 				else
 					io.write(".")
 				end
@@ -69,13 +70,6 @@ function utils.log(str)
 		print(str)
 	end
 end
-
-function utils.test(t) 
-		io.write("A("..t..")")
-		io.read(1)
-		io.write("B\n")
-end
-
 
 function utils.containsArc(tbl, el)
    for i=1, #tbl do
@@ -102,6 +96,14 @@ function utils.getKey(tbl, value)
       end
    end
    return Nil
+end
+
+function utils.copyTable(tbl) 
+	newTbl = {}
+	for p,v in pairs(tbl) do
+		newTbl[p] = v
+	end
+	return newTbl
 end
 
 -- source of this function: https://coronalabs.com/blog/2014/09/02/tutorial-printing-table-contents/

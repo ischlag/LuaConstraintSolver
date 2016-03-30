@@ -63,7 +63,7 @@ for i in pairs(QUEENS) do
 	end
 end
 
-
+my_order = {4,1,3,2,5,6}
 
 
 ------------------[[ PART TWO - KICKSTART THE SOLVER ]]-------------------
@@ -78,7 +78,7 @@ io.write("\n")
 utils.print_r(my_constraints)
 
 -- release the kraken! (or start the solver ...)
-if cp.solve(my_variables, my_constraints, true, false) then 
+if cp.solve(my_variables, my_constraints, my_order, true, false) then 
 	io.write("Success!\n")
 	io.write("Solution: ") 
 	utils.printArray(cp.getSolution())

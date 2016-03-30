@@ -9,708 +9,292 @@ Variables:
 Number of constraints: 
 45
 
-table: 010B27B0 {
-  [1] => table: 010B27B0 {
+table: 01131A98 {
+  [1] => table: 01131A98 {
            [1] => 1
            [2] => 2
-           [3] => function: 010A5990
+           [3] => function: 01127308
          }
-  [2] => table: 010B27B0 {
+  [2] => table: 01131A98 {
            [1] => 1
            [2] => 3
-           [3] => function: 010A5990
+           [3] => function: 01127308
          }
-  [3] => table: 010B27B0 {
+  [3] => table: 01131A98 {
            [1] => 1
            [2] => 4
-           [3] => function: 010A5990
+           [3] => function: 01127308
          }
-  [4] => table: 010B27B0 {
+  [4] => table: 01131A98 {
            [1] => 1
            [2] => 5
-           [3] => function: 010A5990
+           [3] => function: 01127308
          }
-  [5] => table: 010B27B0 {
+  [5] => table: 01131A98 {
            [1] => 1
            [2] => 6
-           [3] => function: 010A5990
+           [3] => function: 01127308
          }
-  [6] => table: 010B27B0 {
+  [6] => table: 01131A98 {
            [1] => 2
            [2] => 3
-           [3] => function: 010A5990
+           [3] => function: 01127308
          }
-  [7] => table: 010B27B0 {
+  [7] => table: 01131A98 {
            [1] => 2
            [2] => 4
-           [3] => function: 010A5990
+           [3] => function: 01127308
          }
-  [8] => table: 010B27B0 {
+  [8] => table: 01131A98 {
            [1] => 2
            [2] => 5
-           [3] => function: 010A5990
+           [3] => function: 01127308
          }
-  [9] => table: 010B27B0 {
+  [9] => table: 01131A98 {
            [1] => 2
            [2] => 6
-           [3] => function: 010A5990
+           [3] => function: 01127308
          }
-  [10] => table: 010B27B0 {
+  [10] => table: 01131A98 {
             [1] => 3
             [2] => 4
-            [3] => function: 010A5990
+            [3] => function: 01127308
           }
-  [11] => table: 010B27B0 {
+  [11] => table: 01131A98 {
             [1] => 3
             [2] => 5
-            [3] => function: 010A5990
+            [3] => function: 01127308
           }
-  [12] => table: 010B27B0 {
+  [12] => table: 01131A98 {
             [1] => 3
             [2] => 6
-            [3] => function: 010A5990
+            [3] => function: 01127308
           }
-  [13] => table: 010B27B0 {
+  [13] => table: 01131A98 {
             [1] => 4
             [2] => 5
-            [3] => function: 010A5990
+            [3] => function: 01127308
           }
-  [14] => table: 010B27B0 {
+  [14] => table: 01131A98 {
             [1] => 4
             [2] => 6
-            [3] => function: 010A5990
+            [3] => function: 01127308
           }
-  [15] => table: 010B27B0 {
+  [15] => table: 01131A98 {
             [1] => 5
             [2] => 6
-            [3] => function: 010A5990
+            [3] => function: 01127308
           }
-  [16] => table: 010B27B0 {
+  [16] => table: 01131A98 {
             [1] => 2
             [2] => 1
-            [3] => function: 010B2210
+            [3] => function: 01131F70
           }
-  [17] => table: 010B27B0 {
+  [17] => table: 01131A98 {
             [1] => 2
             [2] => 1
-            [3] => function: 010B2238
+            [3] => function: 01131F98
           }
-  [18] => table: 010B27B0 {
+  [18] => table: 01131A98 {
             [1] => 3
             [2] => 1
-            [3] => function: 010B2508
+            [3] => function: 01132178
           }
-  [19] => table: 010B27B0 {
+  [19] => table: 01131A98 {
             [1] => 3
             [2] => 1
-            [3] => function: 010B2558
+            [3] => function: 01132088
           }
-  [20] => table: 010B27B0 {
+  [20] => table: 01131A98 {
             [1] => 3
             [2] => 2
-            [3] => function: 010B2350
+            [3] => function: 01132150
           }
-  [21] => table: 010B27B0 {
+  [21] => table: 01131A98 {
             [1] => 3
             [2] => 2
-            [3] => function: 010B23A0
+            [3] => function: 011320D8
           }
-  [22] => table: 010B27B0 {
+  [22] => table: 01131A98 {
             [1] => 4
             [2] => 1
-            [3] => function: 010A4F38
+            [3] => function: 01124F38
           }
-  [23] => table: 010B27B0 {
+  [23] => table: 01131A98 {
             [1] => 4
             [2] => 1
-            [3] => function: 010A4A10
+            [3] => function: 01135B20
           }
-  [24] => table: 010B27B0 {
+  [24] => table: 01131A98 {
             [1] => 4
             [2] => 2
-            [3] => function: 010B5518
+            [3] => function: 01135B70
           }
-  [25] => table: 010B27B0 {
+  [25] => table: 01131A98 {
             [1] => 4
             [2] => 2
-            [3] => function: 010B5400
+            [3] => function: 01135BC0
           }
-  [26] => table: 010B27B0 {
+  [26] => table: 01131A98 {
             [1] => 4
             [2] => 3
-            [3] => function: 010B55B8
+            [3] => function: 011358A0
           }
-  [27] => table: 010B27B0 {
+  [27] => table: 01131A98 {
             [1] => 4
             [2] => 3
-            [3] => function: 010B5568
+            [3] => function: 01135828
           }
-  [28] => table: 010B27B0 {
+  [28] => table: 01131A98 {
             [1] => 5
             [2] => 1
-            [3] => function: 010B55E0
+            [3] => function: 011358C8
           }
-  [29] => table: 010B27B0 {
+  [29] => table: 01131A98 {
             [1] => 5
             [2] => 1
-            [3] => function: 010B5360
+            [3] => function: 01135918
           }
-  [30] => table: 010B27B0 {
+  [30] => table: 01131A98 {
             [1] => 5
             [2] => 2
-            [3] => function: 010B5158
+            [3] => function: 011359B8
           }
-  [31] => table: 010B27B0 {
+  [31] => table: 01131A98 {
             [1] => 5
             [2] => 2
-            [3] => function: 010B5130
+            [3] => function: 01135B48
           }
-  [32] => table: 010B27B0 {
+  [32] => table: 01131A98 {
             [1] => 5
             [2] => 3
-            [3] => function: 010B51A8
+            [3] => function: 01135710
           }
-  [33] => table: 010B27B0 {
+  [33] => table: 01131A98 {
             [1] => 5
             [2] => 3
-            [3] => function: 010B5338
+            [3] => function: 01135A08
           }
-  [34] => table: 010B27B0 {
+  [34] => table: 01131A98 {
             [1] => 5
             [2] => 4
-            [3] => function: 010B4EB0
+            [3] => function: 01135DC8
           }
-  [35] => table: 010B27B0 {
+  [35] => table: 01131A98 {
             [1] => 5
             [2] => 4
-            [3] => function: 010B4F78
+            [3] => function: 01135C10
           }
-  [36] => table: 010B27B0 {
+  [36] => table: 01131A98 {
             [1] => 6
             [2] => 1
-            [3] => function: 010B51D0
+            [3] => function: 01135D00
           }
-  [37] => table: 010B27B0 {
+  [37] => table: 01131A98 {
             [1] => 6
             [2] => 1
-            [3] => function: 010B51F8
+            [3] => function: 01135EB8
           }
-  [38] => table: 010B27B0 {
+  [38] => table: 01131A98 {
             [1] => 6
             [2] => 2
-            [3] => function: 010B4ED8
+            [3] => function: 01135D78
           }
-  [39] => table: 010B27B0 {
+  [39] => table: 01131A98 {
             [1] => 6
             [2] => 2
-            [3] => function: 010B4F00
+            [3] => function: 01135DF0
           }
-  [40] => table: 010B27B0 {
+  [40] => table: 01131A98 {
             [1] => 6
             [2] => 3
-            [3] => function: 010B65C8
+            [3] => function: 01136120
           }
-  [41] => table: 010B27B0 {
+  [41] => table: 01131A98 {
             [1] => 6
             [2] => 3
-            [3] => function: 010B65A0
+            [3] => function: 011362D8
           }
-  [42] => table: 010B27B0 {
+  [42] => table: 01131A98 {
             [1] => 6
             [2] => 4
-            [3] => function: 010B6500
+            [3] => function: 011361E8
           }
-  [43] => table: 010B27B0 {
+  [43] => table: 01131A98 {
             [1] => 6
             [2] => 4
-            [3] => function: 010B6528
+            [3] => function: 01136198
           }
-  [44] => table: 010B27B0 {
+  [44] => table: 01131A98 {
             [1] => 6
             [2] => 5
-            [3] => function: 010B6578
+            [3] => function: 01136210
           }
-  [45] => table: 010B27B0 {
+  [45] => table: 01131A98 {
             [1] => 6
             [2] => 5
-            [3] => function: 010B6460
+            [3] => function: 011360A8
           }
 }
 
-###### DEPTH: 1
-Current Assignments:
-table: 010B2620 {
-  [1] => 1
-  [2] => 0
-  [3] => 0
-  [4] => 0
-  [5] => 0
-  [6] => 0
-}
 
-
+X . . X . . 
+X . X . . . 
+X X . . . . 
 Q X X X X X 
 X X . . . . 
 X . X . . . 
-X . . X . . 
-X . . . X . 
-X . . . . X 
 
-###### DEPTH: 2
-Current Assignments:
-table: 010B2620 {
-  [1] => 1
-  [2] => 3
-  [3] => 0
-  [4] => 0
-  [5] => 0
-  [6] => 0
-}
 
-
-Q 0 0 0 0 0 
-0 0 Q X X X 
-0 X 0 X . . 
-0 . X 0 X . 
-0 . X . 0 X 
-0 . X . . 0 
-
-###### DEPTH: 3
-Current Assignments:
-table: 010B2620 {
-  [1] => 1
-  [2] => 3
-  [3] => 5
-  [4] => 0
-  [5] => 0
-  [6] => 0
-}
-
-
-Q 0 0 0 0 0 
-0 0 Q 0 0 0 
-0 0 0 0 Q X 
-0 X 0 0 0 X 
-0 X 0 X 0 0 
-0 X 0 X X 0 
-
-###### DEPTH: 4
-wipeout
-Current Assignments:
-table: 010B2620 {
-  [1] => 1
-  [2] => 3
-  [3] => 6
-  [4] => 0
-  [5] => 0
-  [6] => 0
-}
-
-
-Q 0 0 0 0 0 
-0 0 Q 0 0 0 
-0 0 0 0 0 Q 
-0 X 0 0 0 X 
-0 X 0 X 0 0 
-0 X 0 X X 0 
-
-###### DEPTH: 4
-wipeout
-wipeout
-Current Assignments:
-table: 010B2620 {
-  [1] => 1
-  [2] => 4
-  [3] => 0
-  [4] => 0
-  [5] => 0
-  [6] => 0
-}
-
-
-Q 0 0 0 0 0 
-0 0 0 Q X X 
-0 . 0 X X . 
-0 X . 0 . X 
-0 . . X 0 . 
-0 . . X . 0 
-
-###### DEPTH: 3
-Current Assignments:
-table: 010B2620 {
-  [1] => 1
-  [2] => 4
-  [3] => 2
-  [4] => 0
-  [5] => 0
-  [6] => 0
-}
-
-
-Q 0 0 0 0 0 
-0 0 0 Q 0 0 
-0 Q 0 0 0 X 
-0 0 X 0 . 0 
-0 X X 0 0 . 
-0 X . 0 X 0 
-
-###### DEPTH: 4
-Current Assignments:
-table: 010B2620 {
-  [1] => 1
-  [2] => 4
-  [3] => 2
-  [4] => 5
-  [5] => 0
-  [6] => 0
-}
-
-
-Q 0 0 0 0 0 
-0 0 0 Q 0 0 
-0 Q 0 0 0 0 
-0 0 0 0 Q 0 
-0 0 0 0 0 X 
-0 0 X 0 0 0 
-
-###### DEPTH: 5
-wipeout
-wipeout
-Current Assignments:
-table: 010B2620 {
-  [1] => 1
-  [2] => 4
-  [3] => 6
-  [4] => 0
-  [5] => 0
-  [6] => 0
-}
-
-
-Q 0 0 0 0 0 
-0 0 0 Q 0 0 
-0 0 0 0 0 Q 
-0 0 . 0 X 0 
-0 . X 0 0 X 
-0 X X 0 . 0 
-
-###### DEPTH: 4
-Current Assignments:
-table: 010B2620 {
-  [1] => 1
-  [2] => 4
-  [3] => 6
-  [4] => 3
-  [5] => 0
-  [6] => 0
-}
-
-
-Q 0 0 0 0 0 
-0 0 0 Q 0 0 
-0 0 0 0 0 Q 
-0 0 Q 0 0 0 
-0 X 0 0 0 0 
-0 0 0 0 X 0 
-
-###### DEPTH: 5
-wipeout
-wipeout
-wipeout
-Current Assignments:
-table: 010B2620 {
-  [1] => 1
-  [2] => 5
-  [3] => 0
-  [4] => 0
-  [5] => 0
-  [6] => 0
-}
-
-
-Q 0 0 0 0 0 
-0 0 0 0 Q X 
-0 . 0 X X X 
-0 X X 0 X . 
-0 X . . 0 X 
-0 X . . X 0 
-
-###### DEPTH: 3
-Current Assignments:
-table: 010B2620 {
-  [1] => 1
-  [2] => 5
-  [3] => 2
-  [4] => 0
-  [5] => 0
-  [6] => 0
-}
-
-
-Q 0 0 0 0 0 
-0 0 0 0 Q 0 
-0 Q 0 0 0 0 
-0 0 0 0 0 . 
-0 0 . X 0 0 
-0 0 X . 0 0 
-
-###### DEPTH: 4
-Current Assignments:
-table: 010B2620 {
-  [1] => 1
-  [2] => 5
-  [3] => 2
-  [4] => 6
-  [5] => 0
-  [6] => 0
-}
-
-
-Q 0 0 0 0 0 
-0 0 0 0 Q 0 
-0 Q 0 0 0 0 
-0 0 0 0 0 Q 
-0 0 X 0 0 0 
-0 0 0 X 0 0 
-
-###### DEPTH: 5
-wipeout
-wipeout
-wipeout
-Current Assignments:
-table: 010B2620 {
-  [1] => 1
-  [2] => 6
-  [3] => 0
-  [4] => 0
-  [5] => 0
-  [6] => 0
-}
-
-
-Q 0 0 0 0 0 
-0 0 0 0 0 Q 
-0 . 0 . X X 
-0 . . 0 . X 
-0 . X . 0 X 
-0 X . . . 0 
-
-###### DEPTH: 3
-Current Assignments:
-table: 010B2620 {
-  [1] => 1
-  [2] => 6
-  [3] => 2
-  [4] => 0
-  [5] => 0
-  [6] => 0
-}
-
-
-Q 0 0 0 0 0 
-0 0 0 0 0 Q 
-0 Q 0 X 0 0 
-0 X X 0 X 0 
-0 X 0 X 0 0 
-0 0 X X X 0 
-
-###### DEPTH: 4
-wipeout
-Current Assignments:
-table: 010B2620 {
-  [1] => 1
-  [2] => 6
-  [3] => 4
-  [4] => 0
-  [5] => 0
-  [6] => 0
-}
-
-
-Q 0 0 0 0 0 
-0 0 0 0 0 Q 
-0 0 0 Q 0 0 
-0 X X 0 X 0 
-0 X 0 X 0 0 
-0 0 X X X 0 
-
-###### DEPTH: 4
-wipeout
-wipeout
-wipeout
-Current Assignments:
-table: 010B2620 {
-  [1] => 2
-  [2] => 0
-  [3] => 0
-  [4] => 0
-  [5] => 0
-  [6] => 0
-}
-
-
-X Q X X X X 
-X X X . . . 
-. X . X . . 
-. X . . X . 
-. X . . . X 
-. X . . . . 
-
-###### DEPTH: 2
-Current Assignments:
-table: 010B2620 {
-  [1] => 2
-  [2] => 4
-  [3] => 0
-  [4] => 0
-  [5] => 0
-  [6] => 0
-}
-
-
-0 Q 0 0 0 0 
-0 0 0 Q X X 
-. 0 X 0 X . 
-. 0 . X 0 X 
-X 0 . X . 0 
-. 0 . X . . 
-
-###### DEPTH: 3
-Current Assignments:
-table: 010B2620 {
-  [1] => 2
-  [2] => 4
-  [3] => 1
-  [4] => 0
-  [5] => 0
-  [6] => 0
-}
-
-
-0 Q 0 0 0 0 
-0 0 0 Q 0 0 
-Q 0 0 0 0 X 
-X 0 . 0 0 0 
-0 0 X 0 . 0 
-X 0 X 0 X . 
-
-###### DEPTH: 4
-Current Assignments:
-table: 010B2620 {
-  [1] => 2
-  [2] => 4
-  [3] => 1
-  [4] => 3
-  [5] => 0
-  [6] => 0
-}
-
-
-0 Q 0 0 0 0 
-0 0 0 Q 0 0 
-Q 0 0 0 0 0 
-0 0 Q 0 0 0 
-0 0 0 0 . 0 
-0 0 0 0 0 . 
-
-###### DEPTH: 5
-Current Assignments:
-table: 010B2620 {
-  [1] => 2
-  [2] => 4
-  [3] => 1
-  [4] => 3
-  [5] => 5
-  [6] => 0
-}
-
-
-0 Q 0 0 0 0 
-0 0 0 Q 0 0 
-Q 0 0 0 0 0 
-0 0 Q 0 0 0 
-0 0 0 0 Q 0 
-0 0 0 0 0 X 
-
-###### DEPTH: 6
-wipeout
-wipeout
-wipeout
-Current Assignments:
-table: 010B2620 {
-  [1] => 2
-  [2] => 4
-  [3] => 6
-  [4] => 0
-  [5] => 0
-  [6] => 0
-}
-
-
-0 Q 0 0 0 0 
-0 0 0 Q 0 0 
-0 0 0 0 0 Q 
-. 0 . 0 0 0 
-0 0 . 0 . 0 
-. 0 X 0 . X 
-
-###### DEPTH: 4
-Current Assignments:
-table: 010B2620 {
-  [1] => 2
-  [2] => 4
-  [3] => 6
-  [4] => 1
-  [5] => 0
-  [6] => 0
-}
-
-
-0 Q 0 0 0 0 
-0 0 0 Q 0 0 
-0 0 0 0 0 Q 
-Q 0 X 0 0 0 
-0 0 . 0 X 0 
-X 0 0 0 . 0 
-
-###### DEPTH: 5
-Current Assignments:
-table: 010B2620 {
-  [1] => 2
-  [2] => 4
-  [3] => 6
-  [4] => 1
-  [5] => 3
-  [6] => 0
-}
-
-
-0 Q 0 0 0 0 
-0 0 0 Q 0 0 
-0 0 0 0 0 Q 
-Q 0 0 0 0 0 
-0 0 Q 0 0 0 
-0 0 0 0 . 0 
-
-###### DEPTH: 6
-Current Assignments:
-table: 010B2620 {
-  [1] => 2
-  [2] => 4
-  [3] => 6
-  [4] => 1
-  [5] => 3
-  [6] => 5
-}
-
-
-0 Q 0 0 0 0 
-0 0 0 Q 0 0 
-0 0 0 0 0 Q 
-Q 0 0 0 0 0 
-0 0 Q 0 0 0 
-0 0 0 0 Q 0 
+4 Q X 4 X X 
+4 X 4 . . . 
+4 4 . X . . 
+Q 4 4 4 4 4 
+4 4 . . . X 
+4 X 4 . . . 
+
+wipeout 3
+
+4 Q 1 4 1 1 
+4 1 4 . . . 
+4 4 2 1 . . 
+Q 4 4 4 4 4 
+4 4 . . . 1 
+4 1 4 . . . 
+
+wipeout 3
+
+4 Q 1 4 1 1 
+4 1 4 . . . 
+4 4 2 1 2 . 
+Q 4 4 4 4 4 
+4 4 . . . 1 
+4 1 4 . . . 
+
+
+4 Q 1 4 1 1 
+4 1 4 . X X 
+4 4 2 1 2 Q 
+Q 4 4 4 4 4 
+4 4 . X X 1 
+4 1 4 X . X 
+
+
+4 Q 1 4 1 1 
+4 1 4 Q 3 3 
+4 4 X 1 X Q 
+Q 4 4 4 4 4 
+4 4 . 3 3 1 
+4 1 4 3 . 3 
+
+
+4 Q 1 4 1 1 
+4 1 4 Q 3 3 
+4 4 2 1 2 Q 
+Q 4 4 4 4 4 
+4 4 Q 3 3 1 
+4 1 4 3 . 3 
 
 Success!
 Solution: 2, 4, 6, 1, 3, 5, 
-Number of search nodes: 24
+Number of search nodes: 8

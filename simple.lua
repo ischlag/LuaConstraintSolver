@@ -34,6 +34,8 @@ my_constraints = {
 	{1,2, cm.lessThan() }
 }
 
+my_order = {1,2}
+
 ------------------[[ PART TWO - KICKSTART THE SOLVER ]]-------------------
 -- print variables and their domains in console
 io.write("Variables:\n")
@@ -46,7 +48,7 @@ utils.print_r(my_constraints)
 io.write("\n")
 
 -- release the kraken! (or start the solver ...)
-if cp.solve(my_variables, my_constraints, true) then 
+if cp.solve(my_variables, my_constraints, my_order, true) then 
 	io.write("Success!\n")
 	io.write("Solution: ") 
 	utils.printArray(cp.getSolution())

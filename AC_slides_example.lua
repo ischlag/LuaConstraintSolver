@@ -37,6 +37,8 @@ my_constraints = {
 	{4,3, cm.lessThan() }
 }
 
+my_order = {1,2,3,4}
+
 ------------------[[ PART TWO - KICKSTART THE SOLVER ]]-------------------
 -- print variables and their domains in console
 io.write("Variables:\n")
@@ -49,5 +51,5 @@ utils.print_r(my_constraints)
 io.write("\n")
 
 -- release the kraken! (or start the solver ...)
-cp.solve(my_variables, my_constraints, false, true)
+cp.solve(my_variables, my_constraints, my_order, false, true)
 print("Arch Consistency Done")
