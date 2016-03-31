@@ -21,19 +21,19 @@ the column of the respective queen.
 
 ----------------------------[[ CONFIGURATION ]]----------------------------
 -- number of queens
-n = 6
+local n = 8
 
 ------------------[[ PART ONE - MODELLING THE PROBLEM ]]-------------------
 -- imports
-utils = require("utils")
-cm = require("constraintModelling")
-cp = require("constraintPropagation")
+local utils = require("utils")
+local cm = require("constraintModelling")
+local cp = require("constraintPropagation")
 
 -- queens domain 1 to n
-QUEENS = cm.range(1,n)
+local QUEENS = cm.range(1,n)
 
 -- the variables table (corresponds to "find" in Essence)
-my_variables = {}
+local my_variables = {}
 
 -- fill with n fields
 for i = 1, n, 1 do
@@ -41,7 +41,7 @@ for i = 1, n, 1 do
 end
 
 -- the constraints table (corresponds to "such that" in Essence)
-my_constraints = {}
+local my_constraints = {}
 utils.append(my_constraints, cm.allDifferent(QUEENS))
 
 -- add diagonal constraints
@@ -63,7 +63,7 @@ for i in pairs(QUEENS) do
 	end
 end
 
-my_order = {4,1,3,2,5,6}
+local my_order = {5,2,3,4,1,6,8,7}
 
 
 ------------------[[ PART TWO - KICKSTART THE SOLVER ]]-------------------
@@ -86,5 +86,6 @@ else
 	io.write("No Solution Found! :(\n")
 end
 
--- TODO: search stats?!
-io.write("Number of search nodes: " .. nodes .. "\n")
+-- search stats
+print("Number of search nodes: " .. nodes )
+print("Number of archs revised: " .. archRev )

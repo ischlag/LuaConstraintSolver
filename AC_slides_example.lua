@@ -15,12 +15,12 @@ See slides
 
 ------------------[[ PART ONE - MODELLING THE PROBLEM ]]-------------------
 -- imports
-utils = require("utils")
-cm = require("constraintModelling")
-cp = require("constraintPropagation")
+local utils = require("utils")
+local cm = require("constraintModelling")
+local cp = require("constraintPropagation")
 
 -- the variables table (corresponds to "find" in Essence)
-my_variables = {
+local my_variables = {
 	{2, 10, 16}, 	-- x1
 	{9, 12, 21},	-- x2
 	{9, 10, 11},	-- x3
@@ -28,7 +28,7 @@ my_variables = {
 }
 
 -- the constraints table (corresponds to "such that" in Essence)
-my_constraints = {
+local my_constraints = {
 	{1,2, cm.lessThan() },
 	{1,3, cm.lessThan() },
 	{1,4, cm.lessThan() },
@@ -37,19 +37,23 @@ my_constraints = {
 	{4,3, cm.lessThan() }
 }
 
-my_order = {1,2,3,4}
+local my_order = {1,2,3,4}
 
 ------------------[[ PART TWO - KICKSTART THE SOLVER ]]-------------------
 -- print variables and their domains in console
-io.write("Variables:\n")
+print("Variables:")
 utils.printMap(my_variables)
-io.write("\n")
+print()
 
 -- print the number of constraints
-io.write("Number of constraints: \n" .. #my_constraints .. "\n")
+print("Number of constraints: \n" .. #my_constraints )
 utils.print_r(my_constraints)
-io.write("\n")
+print()
 
 -- release the kraken! (or start the solver ...)
 cp.solve(my_variables, my_constraints, my_order, false, true)
 print("Arch Consistency Done")
+
+-- search stats
+print("Number of search nodes: " .. nodes )
+print("Number of archs revised: " .. archRev )

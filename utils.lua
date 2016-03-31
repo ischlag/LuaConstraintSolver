@@ -38,12 +38,12 @@ end
 -- viualizes the current state of the board, including pruned variables if available
 -- depth will be 0 if not defined
 function utils.printCurrentBoardState(currentAssignments, variableMask, currDepth)
-	depth = currDepth or 0 -- default variable hack
-	vm = variableMask
-	curr = currentAssignments
+	local depth = currDepth or 0 -- default variable hack
+	local vm = variableMask
+	local curr = currentAssignments
 
 	io.write("\n")
-	n = #variableMask
+	local n = #variableMask
 	for i = 1, n, 1 do
 		for j = 1, n, 1 do
 			if curr[i] == j then
@@ -99,7 +99,7 @@ function utils.getKey(tbl, value)
 end
 
 function utils.copyTable(tbl) 
-	newTbl = {}
+	local newTbl = {}
 	for p,v in pairs(tbl) do
 		newTbl[p] = v
 	end
