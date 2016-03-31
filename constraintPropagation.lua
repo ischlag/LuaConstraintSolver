@@ -115,7 +115,7 @@ function constraintPropagation.forwardChecking(depth)
 		if varMask[depth][d] == 0 then
 			curr[depth] = variables[depth][d]
 			-- clear old assignments
-			for i = depth + 1, #curr, 1 do
+			for i = depth + 1, #curr do
 				if curr[i] ~= 0 then curr[i] = 0 end
 			end
 			-- prune all other possibilities
@@ -232,7 +232,7 @@ function constraintPropagation.checkArcConsistencyAndPrune(depth)
 			-- add to queue all arcs(xh,xi) where h ~= j and h ~= i
 			local xi = currArc[1]
 			local xj = currArc[2]
-			for l = 1, #constraints, 1 do 
+			for l = 1, #constraints do 
 				-- backward arc
 				if constraints[l][1] == xi and constraints[l][2] ~= xj then
 					local nextArc = constraintPropagation.getBackwardArc(constraints[l])
@@ -299,11 +299,11 @@ function constraintPropagation.reviseArc(currArc, queue, depth)
 	-- prune all the domain values of the first variable which are not supported by any second variable domain value
 
 	--iterate over all domain values of the first variable
-	for i = 1, #variables[x1], 1 do 
+	for i = 1, #variables[x1] do 
 		if varMask[x1][i] == 0 and curr[x1] == 0 then
 			local support = false
 			--iterate over all domain values of the second variable
-			for j = 1, #variables[x2], 1 do 
+			for j = 1, #variables[x2] do 
 				if varMask[x2][j] == 0 and curr[x1] == 0 then
 					-- constraint function
 					f = currArc[3]
@@ -346,9 +346,9 @@ function constraintPropagation.addAllArcsFromConstraints()
 	local arcs = {}
 	i = 1
 	
-	for j = 1, #variables, 1 do
-		for k = 1, #variables, 1 do
-			for l = 1, #constraints, 1 do
+	for j = 1, #variables do
+		for k = 1, #variables do
+			for l = 1, #constraints do
 				if (constraints[l][1] == j) and (constraints[l][2] == k) then
 					arcs[i] = constraintPropagation.getForwardArc(constraints[l])
 					i = i + 1
@@ -368,9 +368,9 @@ function constraintPropagation.addAffectedArcs(depth)
 	local arcs = {}
 	local i = 1
 	
-	for j = 1, #variables, 1 do
-		for k = 1, #variables, 1 do
-			for l = 1, #constraints, 1 do
+	for j = 1, #variables do
+		for k = 1, #variables do
+			for l = 1, #constraints do
 				if (constraints[l][1] == j) and (constraints[l][2] == k) then
 					a = constraintPropagation.getForwardArc(constraints[l])
 					if not utils.contains(oldVars, a[1]) and a[2] == depth then
@@ -416,16 +416,16 @@ end
 -- returns the variable of a list with the smallest domain. Establishes a dynamic variable order.
 function constraintPropagation.getSmallestDomainVar(varList) 
 	local counts = {}
-	for i = 1, #varList, 1 do
+	for i = 1, #varList do
 		counts[i] = 0
-		for j = 1, #varMask[i], 1 do
+		for j = 1, #varMask[i] do
 			if varMask[i][j] == 0 then counts[i] = counts[i] + 1 end
 		end
 	end
 
 	local minId = 1
 	local minValue = counts[1]
-	for i = 2, #counts, 1 do 
+	for i = 2, #counts do 
 		if counts[i] < minValue then
 			minValue = counts[i]
 			minId = i
@@ -461,9 +461,9 @@ end
 -- creates a mask for all variables and all domains. 0 means the possible value is not pruned.
 -- a number >0 shows on which depth level the variable got pruned.
 function constraintPropagation.buildEmptyVariableMask()
-	for i = 1, #variables, 1 do
+	for i = 1, #variables do
 		local tbl = {}
-		for j = 1, #variables[i], 1 do
+		for j = 1, #variables[i] do
 			tbl[j] = 0
 		end
 		varMask[i] = tbl

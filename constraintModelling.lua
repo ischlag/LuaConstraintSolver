@@ -15,7 +15,7 @@ local constraintModelling = {}
 function constraintModelling.range(from, to) 
 	local tbl = {}
 	local j = 1
-	for i = from, to, 1 do 
+	for i = from, to do 
 		tbl[j] = i
 		j = j + 1
 	end
@@ -27,7 +27,7 @@ end
 function constraintModelling.allDifferent(indecies)
 	local tbl = {}
 	local k = 1
-	for i = 1, #indecies-1, 1 do
+	for i = 1, #indecies-1 do
 		for j = i+1, #indecies, 1 do
 			tbl[k] = {i, j, constraintModelling.notEquals()}
 			k = k + 1

@@ -36,7 +36,7 @@ local QUEENS = cm.range(1,n)
 local my_variables = {}
 
 -- fill with n fields
-for i = 1, n, 1 do
+for i = 1, n do
 	my_variables[i] = QUEENS
 end
 
@@ -68,14 +68,14 @@ local my_order = {5,2,3,4,1,6,8,7}
 
 ------------------[[ PART TWO - KICKSTART THE SOLVER ]]-------------------
 -- print variables and their domains in console
-io.write("Variables:\n")
+print("Variables:")
 utils.printMap(my_variables)
-io.write("\n")
+print()
 
 -- print the number of constraints
-io.write("Number of constraints: \n" .. #my_constraints .. "\n")
-io.write("\n")
+print("Number of constraints: " .. #my_constraints)
 utils.print_r(my_constraints)
+print()
 
 -- release the kraken! (or start the solver ...)
 if cp.solve(my_variables, my_constraints, my_order, true, false) then 

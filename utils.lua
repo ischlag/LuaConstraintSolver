@@ -44,8 +44,8 @@ function utils.printCurrentBoardState(currentAssignments, variableMask, currDept
 
 	io.write("\n")
 	local n = #variableMask
-	for i = 1, n, 1 do
-		for j = 1, n, 1 do
+	for i = 1, n do
+		for j = 1, n do
 			if curr[i] == j then
 				io.write("Q")
 			else

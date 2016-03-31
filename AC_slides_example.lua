@@ -46,7 +46,7 @@ utils.printMap(my_variables)
 print()
 
 -- print the number of constraints
-print("Number of constraints: \n" .. #my_constraints )
+print("Number of constraints: " .. #my_constraints )
 utils.print_r(my_constraints)
 print()
 

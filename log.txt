@@ -8,431 +8,430 @@ Variables:
 [7] -> 1, 2, 3, 4, 5, 6, 7, 8, 
 [8] -> 1, 2, 3, 4, 5, 6, 7, 8, 
 
-Number of constraints: 
-84
-
-table: 00EF1820 {
-  [1] => table: 00EF1820 {
+Number of constraints: 84
+table: 00C63290 {
+  [1] => table: 00C63290 {
            [1] => 1
            [2] => 2
-           [3] => function: 00EE86C0
+           [3] => function: 00C58FB0
          }
-  [2] => table: 00EF1820 {
+  [2] => table: 00C63290 {
            [1] => 1
            [2] => 3
-           [3] => function: 00EE86C0
+           [3] => function: 00C58FB0
          }
-  [3] => table: 00EF1820 {
+  [3] => table: 00C63290 {
            [1] => 1
            [2] => 4
-           [3] => function: 00EE86C0
+           [3] => function: 00C58FB0
          }
-  [4] => table: 00EF1820 {
+  [4] => table: 00C63290 {
            [1] => 1
            [2] => 5
-           [3] => function: 00EE86C0
+           [3] => function: 00C58FB0
          }
-  [5] => table: 00EF1820 {
+  [5] => table: 00C63290 {
            [1] => 1
            [2] => 6
-           [3] => function: 00EE86C0
+           [3] => function: 00C58FB0
          }
-  [6] => table: 00EF1820 {
+  [6] => table: 00C63290 {
            [1] => 1
            [2] => 7
-           [3] => function: 00EE86C0
+           [3] => function: 00C58FB0
          }
-  [7] => table: 00EF1820 {
+  [7] => table: 00C63290 {
            [1] => 1
            [2] => 8
-           [3] => function: 00EE86C0
+           [3] => function: 00C58FB0
          }
-  [8] => table: 00EF1820 {
+  [8] => table: 00C63290 {
            [1] => 2
            [2] => 3
-           [3] => function: 00EE86C0
+           [3] => function: 00C58FB0
          }
-  [9] => table: 00EF1820 {
+  [9] => table: 00C63290 {
            [1] => 2
            [2] => 4
-           [3] => function: 00EE86C0
+           [3] => function: 00C58FB0
          }
-  [10] => table: 00EF1820 {
+  [10] => table: 00C63290 {
             [1] => 2
             [2] => 5
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [11] => table: 00EF1820 {
+  [11] => table: 00C63290 {
             [1] => 2
             [2] => 6
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [12] => table: 00EF1820 {
+  [12] => table: 00C63290 {
             [1] => 2
             [2] => 7
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [13] => table: 00EF1820 {
+  [13] => table: 00C63290 {
             [1] => 2
             [2] => 8
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [14] => table: 00EF1820 {
+  [14] => table: 00C63290 {
             [1] => 3
             [2] => 4
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [15] => table: 00EF1820 {
+  [15] => table: 00C63290 {
             [1] => 3
             [2] => 5
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [16] => table: 00EF1820 {
+  [16] => table: 00C63290 {
             [1] => 3
             [2] => 6
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [17] => table: 00EF1820 {
+  [17] => table: 00C63290 {
             [1] => 3
             [2] => 7
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [18] => table: 00EF1820 {
+  [18] => table: 00C63290 {
             [1] => 3
             [2] => 8
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [19] => table: 00EF1820 {
+  [19] => table: 00C63290 {
             [1] => 4
             [2] => 5
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [20] => table: 00EF1820 {
+  [20] => table: 00C63290 {
             [1] => 4
             [2] => 6
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [21] => table: 00EF1820 {
+  [21] => table: 00C63290 {
             [1] => 4
             [2] => 7
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [22] => table: 00EF1820 {
+  [22] => table: 00C63290 {
             [1] => 4
             [2] => 8
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [23] => table: 00EF1820 {
+  [23] => table: 00C63290 {
             [1] => 5
             [2] => 6
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [24] => table: 00EF1820 {
+  [24] => table: 00C63290 {
             [1] => 5
             [2] => 7
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [25] => table: 00EF1820 {
+  [25] => table: 00C63290 {
             [1] => 5
             [2] => 8
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [26] => table: 00EF1820 {
+  [26] => table: 00C63290 {
             [1] => 6
             [2] => 7
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [27] => table: 00EF1820 {
+  [27] => table: 00C63290 {
             [1] => 6
             [2] => 8
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [28] => table: 00EF1820 {
+  [28] => table: 00C63290 {
             [1] => 7
             [2] => 8
-            [3] => function: 00EE86C0
+            [3] => function: 00C58FB0
           }
-  [29] => table: 00EF1820 {
+  [29] => table: 00C63290 {
             [1] => 2
             [2] => 1
-            [3] => function: 00EF77B8
+            [3] => function: 00C57BA0
           }
-  [30] => table: 00EF1820 {
+  [30] => table: 00C63290 {
             [1] => 2
             [2] => 1
-            [3] => function: 00EF7920
+            [3] => function: 00C57C40
           }
-  [31] => table: 00EF1820 {
+  [31] => table: 00C63290 {
             [1] => 3
             [2] => 1
-            [3] => function: 00EF79C0
+            [3] => function: 00C57D08
           }
-  [32] => table: 00EF1820 {
+  [32] => table: 00C63290 {
             [1] => 3
             [2] => 1
-            [3] => function: 00EF7768
+            [3] => function: 00C57DD0
           }
-  [33] => table: 00EF1820 {
+  [33] => table: 00C63290 {
             [1] => 3
             [2] => 2
-            [3] => function: 00EF77E0
+            [3] => function: 00C57D58
           }
-  [34] => table: 00EF1820 {
+  [34] => table: 00C63290 {
             [1] => 3
             [2] => 2
-            [3] => function: 00EF7830
+            [3] => function: 00C57DA8
           }
-  [35] => table: 00EF1820 {
+  [35] => table: 00C63290 {
             [1] => 4
             [2] => 1
-            [3] => function: 00EF78D0
+            [3] => function: 00C57BF0
           }
-  [36] => table: 00EF1820 {
+  [36] => table: 00C63290 {
             [1] => 4
             [2] => 1
-            [3] => function: 00EF7A38
+            [3] => function: 00C57E70
           }
-  [37] => table: 00EF1820 {
+  [37] => table: 00C63290 {
             [1] => 4
             [2] => 2
-            [3] => function: 00EF7970
+            [3] => function: 00C57AB0
           }
-  [38] => table: 00EF1820 {
+  [38] => table: 00C63290 {
             [1] => 4
             [2] => 2
-            [3] => function: 00EF7A88
+            [3] => function: 00C57EC0
           }
-  [39] => table: 00EF1820 {
+  [39] => table: 00C63290 {
             [1] => 4
             [2] => 3
-            [3] => function: 00EF7C18
+            [3] => function: 00C58168
           }
-  [40] => table: 00EF1820 {
+  [40] => table: 00C63290 {
             [1] => 4
             [2] => 3
-            [3] => function: 00EF7C90
+            [3] => function: 00C58078
           }
-  [41] => table: 00EF1820 {
+  [41] => table: 00C63290 {
             [1] => 5
             [2] => 1
-            [3] => function: 00EF7D30
+            [3] => function: 00C58190
           }
-  [42] => table: 00EF1820 {
+  [42] => table: 00C63290 {
             [1] => 5
             [2] => 1
-            [3] => function: 00EF7D08
+            [3] => function: 00C57FB0
           }
-  [43] => table: 00EF1820 {
+  [43] => table: 00C63290 {
             [1] => 5
             [2] => 2
-            [3] => function: 00EF7D80
+            [3] => function: 00C580C8
           }
-  [44] => table: 00EF1820 {
+  [44] => table: 00C63290 {
             [1] => 5
             [2] => 2
-            [3] => function: 00EF7DA8
+            [3] => function: 00C580F0
           }
-  [45] => table: 00EF1820 {
+  [45] => table: 00C63290 {
             [1] => 5
             [2] => 3
-            [3] => function: 00EE70A0
+            [3] => function: 00C67E50
           }
-  [46] => table: 00EF1820 {
+  [46] => table: 00C63290 {
             [1] => 5
             [2] => 3
-            [3] => function: 00EE6F10
+            [3] => function: 00C67B80
           }
-  [47] => table: 00EF1820 {
+  [47] => table: 00C63290 {
             [1] => 5
             [2] => 4
-            [3] => function: 00EE6C18
+            [3] => function: 00C67A90
           }
-  [48] => table: 00EF1820 {
+  [48] => table: 00C63290 {
             [1] => 5
             [2] => 4
-            [3] => function: 00EE6D08
+            [3] => function: 00C67AB8
           }
-  [49] => table: 00EF1820 {
+  [49] => table: 00C63290 {
             [1] => 6
             [2] => 1
-            [3] => function: 00EE6D58
+            [3] => function: 00C67C70
           }
-  [50] => table: 00EF1820 {
+  [50] => table: 00C63290 {
             [1] => 6
             [2] => 1
-            [3] => function: 00EE7000
+            [3] => function: 00C67A68
           }
-  [51] => table: 00EF1820 {
+  [51] => table: 00C63290 {
             [1] => 6
             [2] => 2
-            [3] => function: 00EE6E48
+            [3] => function: 00C67EF0
           }
-  [52] => table: 00EF1820 {
+  [52] => table: 00C63290 {
             [1] => 6
             [2] => 2
-            [3] => function: 00EE6CB8
+            [3] => function: 00C67CC0
           }
-  [53] => table: 00EF1820 {
+  [53] => table: 00C63290 {
             [1] => 6
             [2] => 3
-            [3] => function: 00EE7028
+            [3] => function: 00C67EC8
           }
-  [54] => table: 00EF1820 {
+  [54] => table: 00C63290 {
             [1] => 6
             [2] => 3
-            [3] => function: 00EE6C90
+            [3] => function: 00C67A40
           }
-  [55] => table: 00EF1820 {
+  [55] => table: 00C63290 {
             [1] => 6
             [2] => 4
-            [3] => function: 00EE7050
+            [3] => function: 00C67DD8
           }
-  [56] => table: 00EF1820 {
+  [56] => table: 00C63290 {
             [1] => 6
             [2] => 4
-            [3] => function: 00EE72F8
+            [3] => function: 00C681C0
           }
-  [57] => table: 00EF1820 {
+  [57] => table: 00C63290 {
             [1] => 6
             [2] => 5
-            [3] => function: 00EE7168
+            [3] => function: 00C68170
           }
-  [58] => table: 00EF1820 {
+  [58] => table: 00C63290 {
             [1] => 6
             [2] => 5
-            [3] => function: 00EE7320
+            [3] => function: 00C67F68
           }
-  [59] => table: 00EF1820 {
+  [59] => table: 00C63290 {
             [1] => 7
             [2] => 1
-            [3] => function: 00EE7258
+            [3] => function: 00C68080
           }
-  [60] => table: 00EF1820 {
+  [60] => table: 00C63290 {
             [1] => 7
             [2] => 1
-            [3] => function: 00EE7230
+            [3] => function: 00C680A8
           }
-  [61] => table: 00EF1820 {
+  [61] => table: 00C63290 {
             [1] => 7
             [2] => 2
-            [3] => function: 00EE72D0
+            [3] => function: 00C67F90
           }
-  [62] => table: 00EF1820 {
+  [62] => table: 00C63290 {
             [1] => 7
             [2] => 2
-            [3] => function: 00EF89D0
+            [3] => function: 00C68EB0
           }
-  [63] => table: 00EF1820 {
+  [63] => table: 00C63290 {
             [1] => 7
             [2] => 3
-            [3] => function: 00EF8B88
+            [3] => function: 00C68C58
           }
-  [64] => table: 00EF1820 {
+  [64] => table: 00C63290 {
             [1] => 7
             [2] => 3
-            [3] => function: 00EF8908
+            [3] => function: 00C68BE0
           }
-  [65] => table: 00EF1820 {
+  [65] => table: 00C63290 {
             [1] => 7
             [2] => 4
-            [3] => function: 00EF88B8
+            [3] => function: 00C68B68
           }
-  [66] => table: 00EF1820 {
+  [66] => table: 00C63290 {
             [1] => 7
             [2] => 4
-            [3] => function: 00EF8840
+            [3] => function: 00C68A50
           }
-  [67] => table: 00EF1820 {
+  [67] => table: 00C63290 {
             [1] => 7
             [2] => 5
-            [3] => function: 00EF88E0
+            [3] => function: 00C68CD0
           }
-  [68] => table: 00EF1820 {
+  [68] => table: 00C63290 {
             [1] => 7
             [2] => 5
-            [3] => function: 00EF8958
+            [3] => function: 00C68AF0
           }
-  [69] => table: 00EF1820 {
+  [69] => table: 00C63290 {
             [1] => 7
             [2] => 6
-            [3] => function: 00EF8890
+            [3] => function: 00C68CA8
           }
-  [70] => table: 00EF1820 {
+  [70] => table: 00C63290 {
             [1] => 7
             [2] => 6
-            [3] => function: 00EF8930
+            [3] => function: 00C68DE8
           }
-  [71] => table: 00EF1820 {
+  [71] => table: 00C63290 {
             [1] => 8
             [2] => 1
-            [3] => function: 00EF8BD8
+            [3] => function: 00C68B40
           }
-  [72] => table: 00EF1820 {
+  [72] => table: 00C63290 {
             [1] => 8
             [2] => 1
-            [3] => function: 00EF87F0
+            [3] => function: 00C68E88
           }
-  [73] => table: 00EF1820 {
+  [73] => table: 00C63290 {
             [1] => 8
             [2] => 2
-            [3] => function: 00EF8DE0
+            [3] => function: 00C69130
           }
-  [74] => table: 00EF1820 {
+  [74] => table: 00C63290 {
             [1] => 8
             [2] => 2
-            [3] => function: 00EF8CC8
+            [3] => function: 00C691A8
           }
-  [75] => table: 00EF1820 {
+  [75] => table: 00C63290 {
             [1] => 8
             [2] => 3
-            [3] => function: 00EF8D18
+            [3] => function: 00C68F78
           }
-  [76] => table: 00EF1820 {
+  [76] => table: 00C63290 {
             [1] => 8
             [2] => 3
-            [3] => function: 00EF8E80
+            [3] => function: 00C691F8
           }
-  [77] => table: 00EF1820 {
+  [77] => table: 00C63290 {
             [1] => 8
             [2] => 4
-            [3] => function: 00EF8C00
+            [3] => function: 00C69040
           }
-  [78] => table: 00EF1820 {
+  [78] => table: 00C63290 {
             [1] => 8
             [2] => 4
-            [3] => function: 00EF8CA0
+            [3] => function: 00C69090
           }
-  [79] => table: 00EF1820 {
+  [79] => table: 00C63290 {
             [1] => 8
             [2] => 5
-            [3] => function: 00EFA260
+            [3] => function: 00C6A830
           }
-  [80] => table: 00EF1820 {
+  [80] => table: 00C63290 {
             [1] => 8
             [2] => 5
-            [3] => function: 00EFA120
+            [3] => function: 00C6A948
           }
-  [81] => table: 00EF1820 {
+  [81] => table: 00C63290 {
             [1] => 8
             [2] => 6
-            [3] => function: 00EFA3F0
+            [3] => function: 00C6A768
           }
-  [82] => table: 00EF1820 {
+  [82] => table: 00C63290 {
             [1] => 8
             [2] => 6
-            [3] => function: 00EF9F90
+            [3] => function: 00C6A7E0
           }
-  [83] => table: 00EF1820 {
+  [83] => table: 00C63290 {
             [1] => 8
             [2] => 7
-            [3] => function: 00EFA378
+            [3] => function: 00C6A9C0
           }
-  [84] => table: 00EF1820 {
+  [84] => table: 00C63290 {
             [1] => 8
             [2] => 7
-            [3] => function: 00EF9F68
+            [3] => function: 00C6A7B8
           }
 }
+
 
 prune: 1
 prune: 5
