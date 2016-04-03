@@ -51,7 +51,7 @@ utils.print_r(my_constraints)
 print()
 
 -- release the kraken! (or start the solver ...)
-cp.solve(my_variables, my_constraints, my_order, false, true)
+cp.solve(my_variables, my_constraints, my_order, false, true) -- don't run the solver
 print("Arch Consistency Done")
 
 -- search stats

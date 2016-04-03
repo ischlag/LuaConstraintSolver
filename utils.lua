@@ -6,7 +6,7 @@ Practical 2, 12.04.2016
 
 Description:
 This file is a module. It provides utility functions which didn't belong 
-into the modelling or propagation module. 
+into the modeling or propagation module. 
 
 --]]
 local utils = {}
@@ -21,9 +21,10 @@ end
 
 -- prints an array to the console (no keys)
 function utils.printArray(arr)
-	for i=1, #arr do
+	for i=1, #arr-1 do
 		io.write(arr[i] .. ", ")
 	end
+	io.write(arr[#arr])
 	io.write("\n")
 end
 
@@ -33,6 +34,12 @@ function utils.append(t1,t2)
         t1[#t1+1] = t2[i]
     end
     return t1
+end
+
+-- remove from table by value
+function utils.removeByValue(vList, value)
+	key = utils.getKey(vList, value)
+	table.remove(vList, key)
 end
 
 -- viualizes the current state of the board, including pruned variables if available
@@ -51,9 +58,10 @@ function utils.printCurrentBoardState(currentAssignments, variableMask, currDept
 			else
 				if vm[i][j] == depth then
 					io.write("X")
+				elseif vm[i][j] == -1 then
+					io.write("-")
 				elseif vm[i][j] ~= 0 then
-					io.write(tostring(vm[i][j]))
-					--io.write("0")
+					io.write(tostring(vm[i][j]))					
 				else
 					io.write(".")
 				end
@@ -65,12 +73,31 @@ function utils.printCurrentBoardState(currentAssignments, variableMask, currDept
 	io.write("\n")	
 end
 
-function utils.log(str)
-	if log then
+-- print board based on solutions table
+function utils.printSolutionBoard(solution, variables) 
+	local n = #variables
+	for i = 1, n do
+		for j = 1, n do
+			if solution[i] == j then
+				io.write("Q")
+			else
+				io.write(".")
+			end
+			io.write(" ")
+		end
+		io.write("\n")
+	end
+	io.write("\n")	
+end
+
+-- simple log function, for different log levels
+function utils.log(lvl, str)
+	if lvl <= log then
 		print(str)
 	end
 end
 
+-- returns if table contains arc
 function utils.containsArc(tbl, el)
    for i=1, #tbl do
       if (tbl[i][1] == el[1]) and (tbl[i][2] == el[2]) then 
@@ -80,6 +107,7 @@ function utils.containsArc(tbl, el)
    return false
 end
 
+-- returns if table contains value
 function utils.contains(tbl, el)
    for i=1, #tbl do
       if tbl[i] == el then 
@@ -89,6 +117,7 @@ function utils.contains(tbl, el)
    return false
 end
 
+-- find table index based on value
 function utils.getKey(tbl, value)
    for i=1, #tbl do
       if tbl[i] == value then 
@@ -98,6 +127,7 @@ function utils.getKey(tbl, value)
    return Nil
 end
 
+-- shallow copy of a table
 function utils.copyTable(tbl) 
 	local newTbl = {}
 	for p,v in pairs(tbl) do
@@ -106,6 +136,7 @@ function utils.copyTable(tbl)
 	return newTbl
 end
 
+-- recursive function to print table content
 -- source of this function: https://coronalabs.com/blog/2014/09/02/tutorial-printing-table-contents/
 function utils.print_r ( t )  
     local print_r_cache={}
