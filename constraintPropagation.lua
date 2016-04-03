@@ -33,14 +33,14 @@ log = 0
 findOnlyFirstSolutions = false
 
 --------------------------- private variables ---------------------------
--- the current variable associations
-local curr = {}
 -- the variables and their domains
 local variables = {}
--- used up vars
-local oldVars = {}
 -- the constraints
 local constraints = {}
+-- the current variable associations
+local curr = {}
+-- used up vars
+local usedVars = {-1}
 -- the number of variables the current model uses.
 local varCount = 0
 -- mask in order to prune variable dimensions. Only used when forward checking.
@@ -79,9 +79,9 @@ function constraintPropagation.solve(vars, constr, verbose, findOnlyFirst)
 	-- initial pruning
 	constraintPropagation.checkArcConsistencyAndPrune(-1)
 
-	--local solution = constraintPropagation.forwardChecking(1)
-	--local solution = constraintPropagation.MAC3(order, 0)	
-	local solution = constraintPropagation.forwardChecking2Way(order, {-1})
+	--local solution = constraintPropagation.forwardChecking(1) --DEPRECATED
+	--local solution = constraintPropagation.MAC3(order, 0)	-- DEPRECATED
+	local solution = constraintPropagation.forwardChecking2Way(order, usedVars)
 	local end_time = os.clock()
 	elapsed_time = end_time - start_time
 
@@ -355,13 +355,13 @@ function constraintPropagation.addAffectedArcs(depth)
 			for l = 1, #constraints do
 				if (constraints[l][1] == j) and (constraints[l][2] == k) then
 					a = constraintPropagation.getForwardArc(constraints[l])
-					if not utils.contains(oldVars, a[1]) and a[2] == depth then
+					if not utils.contains(usedVars, a[1]) and a[2] == depth then
 						arcs[i] = a
 						i = i + 1
 					end
 				elseif (constraints[l][1] == k) and (constraints[l][2] == j) then
 					a = constraintPropagation.getBackwardArc(constraints[l])
-					if not utils.contains(oldVars, a[1]) and a[2] == depth then
+					if not utils.contains(usedVars, a[1]) and a[2] == depth then
 						arcs[i] = a
 						i = i + 1
 					end

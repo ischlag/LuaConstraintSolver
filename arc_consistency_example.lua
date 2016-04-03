@@ -5,7 +5,7 @@ Practical 2, 12.04.2016
 150021237
 
 Description:
-ArcConsistency Example from the slides in Week 7 Lecture 1 Page 67-90
+Arc consistency example from the slides in Week 7 Lecture 1 Page 67-90
 This version prints all log outputs
 
 CSP:
@@ -16,7 +16,7 @@ See slides
 ------------------[[ PART ONE - MODELLING THE PROBLEM ]]-------------------
 -- imports
 local utils = require("utils")
-local cm = require("constraintModelling")
+local cm = require("constraintModeling")
 local cp = require("constraintPropagation")
 
 -- the variables table (corresponds to "find" in Essence)
@@ -41,19 +41,35 @@ local my_order = {1,2,3,4}
 
 ------------------[[ PART TWO - KICKSTART THE SOLVER ]]-------------------
 -- print variables and their domains in console
-print("Variables:")
+-- print variables and their domains in console
+print("Number of variables: " .. #my_variables)
 utils.printMap(my_variables)
 print()
 
 -- print the number of constraints
-print("Number of constraints: " .. #my_constraints )
+print("Number of constraints: " .. #my_constraints)
 utils.print_r(my_constraints)
 print()
 
 -- release the kraken! (or start the solver ...)
-cp.solve(my_variables, my_constraints, my_order, false, true) -- don't run the solver
-print("Arch Consistency Done")
+local solutions = cp.solve(my_variables, my_constraints, 2, true)
+
+-- wrap up
+if solutions > 0 then
+	print("Success!")
+	print(solutions .. " solutions found.")
+	print()
+	print("Solutions: ") 
+	for i,arr in pairs(solutionAssignments) do
+		utils.printArray(arr)
+	end		
+	print()
+else
+	print("No Solution Found! :(")
+	print()
+end
 
 -- search stats
 print("Number of search nodes: " .. nodes )
 print("Number of archs revised: " .. archRev )
+print("Time elapsed: " .. elapsed_time)
